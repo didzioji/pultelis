@@ -6,8 +6,8 @@
 
 const int SERVO_PIN = 13;
 const int SERVO_DEFAULT_POSITION = 20; // degrees
-const int SERVO_PRESS_POSITION = 15; // degrees
-const int SERVO_PRESS_DURATION = 500; // ms
+const int SERVO_PRESS_POSITION = 12; // degrees
+const int SERVO_PRESS_DURATION = 700; // ms
 const int WATCHDOG_TIMEOUT = 120; // seconds
 
 Servo servo;
@@ -32,7 +32,6 @@ void log_message(String message) {
 void press_remote() {
     servo.write(SERVO_PRESS_POSITION);
     delay(SERVO_PRESS_DURATION);
-    
     servo.write(SERVO_DEFAULT_POSITION);
     delay(200);
 }
